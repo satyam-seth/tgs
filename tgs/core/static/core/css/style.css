@@ -36,15 +36,20 @@
 body, html {
   height: 100%;
 }
+
 .bg {
-  /* The image used */
   background-image: url('../images/pubg.jpg');
   opacity: 0.8;
-  /* Full height */
-  height: 100%;
-
-  /* Center and scale the image nicely */
+  /* height: 100%; */
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-size: cover;
+}
+
+.trans{
+  background-color: rgba(228, 104, 21, 0.3);
+}
+
+.fstyle{
+  font-family: 'Grenze Gotisch', cursive;
 }
