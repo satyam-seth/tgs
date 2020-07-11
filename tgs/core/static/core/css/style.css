@@ -40,16 +40,25 @@ body, html {
 .bg {
   background-image: url('../images/pubg.jpg');
   opacity: 0.8;
-  /* height: 100%; */
+  height: 100%;
   background-position: center;
   background-repeat: repeat-y;
   background-size: cover;
 }
 
-.trans{
+.trans-l1{
   background-color: rgba(228, 104, 21, 0.3);
 }
 
+.trans-l2{
+  background-color: rgba(228, 104, 21, 0.4);
+}
+
+
 .fstyle{
   font-family: 'Grenze Gotisch', cursive;
+}
+
+.form-control{
+  background-color: rgb(177,168,168);
 }
