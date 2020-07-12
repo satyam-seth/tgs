@@ -41,119 +41,85 @@
   </div>
 </div>
 
-<div class="container-fluid bg fstyle">
-  <div class="container trans-l1 rounded border my-5">
-    <div class="row pt-3 text-light text-center">
+<div class="container-fluid bg text-center text-light">
+  <div class="container my-5 border border-primary border-2 rounded trans-l1">
+    <div class="row">
       <div class="col-12">
-        <div class="h1 text-warning" style="font-size:9vw">MONTHLY WINNERS</div>
+        <div class="fstyle" style="font-size:8vw">MONTHLY WINNERS</div>
       </div>
     </div>
+
     <div class="row">
-      <div class="col-5">
-        <hr style='border: 1px solid orange;'>
+      <div class="col">
+        <hr style='border: 2px solid white;'>
       </div>
       <div class="col-2">
-        <img class="mx-auto d-block" src="{% static 'core/images/swards.png' %}">
+        <img src="{% static 'core/images/swards.png' %}">
       </div>
-      <div class="col-5 pb-4">
-        <hr style='border: 1px solid orange;'>
+      <div class="col">
+        <hr style='border: 2px solid white;'>
       </div>
     </div>
-    
-    <div class="text-center text-warning border rounded border-warning fstyle trans-l2" style="font-size:7vw;">
-      <img src="{% static 'core/images/legend.png' %}" alt="" width="10%">
-      Legend Team</div>
-    
-    <div class="row m-3 text-center">
-      <table class="table text-warning table-borderless">
-        <tbody>
-          <tr>
-            <td style="width: 30%;" class=""><img src="{% static 'core/images/logo.jpeg' %}" alt="..." class="img-thumbnail"></td>
-            <td class="py-md-5" style="width: 70%;font-size:6vw;">TGS Gaming Name
-              <a href="#" class="btn btn-sm btn-outline-warning"><b>Team Details <i class="far fa-eye"></i></b></a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    
-    <div class="text-center text-warning border rounded border-warning fstyle trans-l2" style="font-size:7vw;">
-      <img src="{% static 'core/images/champian1.png' %}" alt="" width="10%">
-      Champian Team</div>
-    
-    <div class="row m-3 text-center">
-      <table class="table text-warning table-borderless">
-        <tbody>
-          <tr>
-            <td style="width: 30%;" class=""><img src="{% static 'core/images/logo.jpeg' %}" alt="..." class="img-thumbnail"></td>
-            <td class="py-md-5" style="width: 70%;font-size:6vw;">TGS Gaming Name
-              <a href="#" class="btn btn-sm btn-outline-warning"><b>Team Details <i class="far fa-eye"></i></b></a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    
-    <div class="text-center text-warning border rounded border-warning fstyle trans-l2" style="font-size:7vw;">
-      <img src="{% static 'core/images/champian2.png' %}" alt="" width="10%">
-      Champian Team</div>
-    
-    <div class="row m-3 text-center">
-      <table class="table text-warning table-borderless">
-        <tbody>
-          <tr>
-            <td style="width: 30%;" class=""><img src="{% static 'core/images/logo.jpeg' %}" alt="..." class="img-thumbnail"></td>
-            <td class="py-md-5" style="width: 70%;font-size:6vw;">TGS Gaming Name
-              <a href="#" class="btn btn-sm btn-outline-warning"><b>Team Details <i class="far fa-eye"></i></b></a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    
-    
-    <!-- <div class="pb-4">
-      <div class="row py-2">
-        <div class="col-4 col-md-2 pt-2">
-          <img src="{% static 'core/images/logo.jpeg' %}" alt="..." class="img-thumbnail">
+
+    <div class="row pt-3">
+      <div class="offset-3"></div>
+      <div class="col-6">
+        <div class="fstyle border border-primary rounded trans-l2" style="font-size:5vw;">
+          <img src="{% static 'core/images/legend.png' %}" alt="" width="18%">
+          Legend Team</div>
+          <div>
+            <div class="container-fluid">
+              <div class="row py-2">
+                <div class="col-md-4">
+                  <img src="{% static 'core/images/logo.jpeg' %}" alt="..." class="img-fluid border border-light rounded">
+                </div>
+                <div class="col-md-8" style="font-size:4vw;">
+                  RAVEN X
+                  <a href="#" class="btn btn-sm btn-outline-primary">Team Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="row py-4">
+        <div class="col-6">
+          <div class="fstyle border border-primary rounded trans-l2 mx-3" style="font-size:4vw;">
+            <img src="{% static 'core/images/champian1.png' %}" alt="" width="15%">
+            Champian Team</div> 
+          <div class="container-fluid">
+            <div class="row py-2">
+              <div class="col-md-4 px-4">
+                <img src="{% static 'core/images/logo.jpeg' %}" alt="..." class="img-fluid border border-light rounded">
+              </div>
+              <div class="col-md-8" style="font-size:4vw;">
+                HUNTER GAMERZ
+                <a href="#" class="btn btn-sm btn-outline-primary">Team Details</a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-8 col-md-10 text-light text-center pt-md-4">
-          <div class="h3">Legend Team</div>
-          <div class="h5">TSG Gamning</div>
-          <div class="pt-md-2">
-            <a href="#" class="btn btn-sm btn-warning"><b>Score Card <i class="far fa-eye"></i></b></a>
+    
+        <div class="col-6">
+          <div class="fstyle border border-primary rounded trans-l2 mx-3" style="font-size:4vw;">
+            <img src="{% static 'core/images/champian2.png' %}" alt="" width="15%">
+            Champian Team</div> 
+          <div class="container-fluid">
+            <div class="row py-2">
+              <div class="col-md-4 px-4">
+                <img src="{% static 'core/images/logo.jpeg' %}" alt="..." class="img-fluid border border-light rounded">
+              </div>
+              <div class="col-md-8" style="font-size:4vw;">
+                DEADLY VIPER
+                <a href="#" class="btn btn-sm btn-outline-primary">Team Details</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <hr style='border: 1px solid orange;'>
-      <div class="row py-2">
-        <div class="col-4 col-md-2 pt-2">
-          <img src="{% static 'core/images/logo.jpeg' %}" alt="..." class="img-thumbnail">
-        </div>
-        <div class="col-8 col-md-10 text-light text-center pt-md-4">
-          <div class="h4">Champian Team</div>
-          <div class="h5">Maximum</div>
-          <div class="pt-md-2">
-            <a href="#" class="btn btn-sm btn-warning"><b>Score Card <i class="far fa-eye"></i></b></a>
-          </div>
-        </div>
-      </div>
-      <hr style='border: 1px solid orange;'>
-      <div class="row py-2">
-        <div class="col-4 col-md-2 pt-2">
-          <img src="{% static 'core/images/logo.jpeg' %}" alt="..." class="img-thumbnail">
-        </div>
-        <div class="col-8 col-md-10 text-light text-center pt-md-4">
-          <div class="h4">Champian Team</div>
-          <div class="h5">The Scorpion</div>
-          <div class="pt-md-2">
-            <a href="#" class="btn btn-sm btn-warning"><b>Score Card <i class="far fa-eye"></i></b></a>
-          </div>
-        </div>
-      </div>
-    </div> -->
+        
+    </div>
   </div>
 </div>
-
 
 {% endblock content %}
