@@ -11,22 +11,22 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="{% static 'core/images/1.jpg' %}" class="d-block w-100" alt="...">
+          <img src="{% static 'core/images/1.jpg' %}" class="d-block w-100" alt="Not Available">
         </div>
         <div class="carousel-item">
-          <img src="{% static 'core/images/2.jpg' %}" class="d-block w-100" alt="...">
+          <img src="{% static 'core/images/2.jpg' %}" class="d-block w-100" alt="Not Available">
         </div>
         <div class="carousel-item">
-          <img src="{% static 'core/images/3.jpg' %}" class="d-block w-100" alt="...">
+          <img src="{% static 'core/images/3.jpg' %}" class="d-block w-100" alt="Not Available">
         </div>
         <div class="carousel-item">
-          <img src="{% static 'core/images/4.jpg' %}" class="d-block w-100" alt="...">
+          <img src="{% static 'core/images/4.jpg' %}" class="d-block w-100" alt="Not Available">
         </div>
         <div class="carousel-item">
-          <img src="{% static 'core/images/5.jpg' %}" class="d-block w-100" alt="...">
+          <img src="{% static 'core/images/5.jpg' %}" class="d-block w-100" alt="Not Available">
         </div>
         <div class="carousel-item">
-          <img src="{% static 'core/images/6.jpg' %}" class="d-block w-100" alt="...">
+          <img src="{% static 'core/images/6.jpg' %}" class="d-block w-100" alt="Not Available">
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -71,10 +71,10 @@
             <div class="container-fluid">
               <div class="row py-2">
                 <div class="col-md-4">
-                  <img src="{% static 'core/images/logo.jpeg' %}" alt="..." class="img-fluid border border-light rounded">
+                  <img src="{{first.team_img.url}}" alt="Not Available" class="img-fluid border border-light rounded">
                 </div>
                 <div class="col-md-8" style="font-size:4vw;">
-                  RAVEN X
+                  {{first.team_name|upper}}
                   <a href="#" class="btn btn-sm btn-outline-primary">Team Details</a>
                 </div>
               </div>
@@ -90,10 +90,10 @@
           <div class="container-fluid">
             <div class="row py-2">
               <div class="col-md-4 px-4">
-                <img src="{% static 'core/images/logo.jpeg' %}" alt="..." class="img-fluid border border-light rounded">
+                <img src="{{second.team_img.url}}" alt="Not Available" class="img-fluid border border-light rounded">
               </div>
               <div class="col-md-8" style="font-size:4vw;">
-                HUNTER GAMERZ
+                {{second.team_name|upper}}
                 <a href="#" class="btn btn-sm btn-outline-primary">Team Details</a>
               </div>
             </div>
@@ -107,10 +107,10 @@
           <div class="container-fluid">
             <div class="row py-2">
               <div class="col-md-4 px-4">
-                <img src="{% static 'core/images/logo.jpeg' %}" alt="..." class="img-fluid border border-light rounded">
+                <img src="{{third.team_img.url}}" alt="Not Available" class="img-fluid border border-light rounded">
               </div>
               <div class="col-md-8" style="font-size:4vw;">
-                DEADLY VIPER
+                {{third.team_name|upper}}
                 <a href="#" class="btn btn-sm btn-outline-primary">Team Details</a>
               </div>
             </div>
