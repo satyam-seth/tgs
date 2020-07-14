@@ -20,72 +20,28 @@
                 <hr style='border: 2px solid white;'>
             </div>
         </div>
+
+        {% for contest in contests %}
         <div class="row m-1 pr-3 py-2 border border-primary trans-l2 text-center" style="font-size:3vw;">
             <div class="col-2">
-                28 Jun
+                {{contest.d_date|date:"j M"}}
             </div>
             <div class="col-2">
-                Squad
+                {{contest.d_type}}
             </div>
             <div class="col-3">
-                Entry <i style="font-size: 2vw" class="fas fa-rupee-sign"></i>40
+                Entry <i style="font-size: 2vw" class="fas fa-rupee-sign"></i>{{contest.d_fees}}
             </div>
             <div class="col-3">
-                Total Games 1
-            </div>
-            <div class="col-2">
-                <a href="#" class="btn btn-sm btn-primary">Join</a>
-            </div>
-            <!-- <table class="table table-borderless">
-            <tbody style="font-size:5vw;">
-              <tr class="border border-primary rounded">
-                <th style="width: 30%;">28 Jun</th>
-                <td style="width: 20%;">Squad</td>
-                <td>Entry <i style="font-size: 3.5vw" class="fas fa-rupee-sign"></i>40</td>
-                <td>
-                    <a href="#" class="btn btn-primary"><b>Team Details <i class="far fa-eye"></i></b></a>
-                </td>
-              </tr>
-            </tbody>
-          </table> -->
-        </div>
-        <br>
-        <div class="row m-1 pr-3 py-2 border border-primary trans-l2 text-center" style="font-size:3vw;">
-            <div class="col-2">
-                30 Jun
-            </div>
-            <div class="col-2">
-                Solo
-            </div>
-            <div class="col-3">
-                Entry <i style="font-size: 2vw" class="fas fa-rupee-sign"></i>50
-            </div>
-            <div class="col-3">
-                Total Games 2
+                Total Games {{contest.d_tgames}}
             </div>
             <div class="col-2">
                 <a href="#" class="btn btn-sm btn-primary">Join</a>
             </div>
         </div>
         <br>
-        <div class="row m-1 pr-3 py-2 border border-primary trans-l2 text-center" style="font-size:3vw;">
-            <div class="col-2">
-                17 Aug
-            </div>
-            <div class="col-2">
-                Squad
-            </div>
-            <div class="col-3">
-                Entry <i style="font-size: 2vw" class="fas fa-rupee-sign"></i>40
-            </div>
-            <div class="col-3">
-                Total Games 1
-            </div>
-            <div class="col-2">
-                <a href="#" class="btn btn-sm btn-primary">Join</a>
-            </div>
-        </div>
-        <br>
+        {% endfor %}
+        
     </div>
 </div>
 

@@ -13,7 +13,7 @@ def home(request):
         'home_disabled':'disabled',
         'first':first,
         'second':second,
-        'third':third
+        'third':third,
         }
 
     return render(request,'core/home.html',context)

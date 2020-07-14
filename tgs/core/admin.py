@@ -5,4 +5,4 @@ from core.models import Winner
 
 @admin.register(Winner)
 class WinnerAdmin(admin.ModelAdmin):
-    list_display=['id','team_name','team_img']
+    list_display=['id','team_name','team_logo']
