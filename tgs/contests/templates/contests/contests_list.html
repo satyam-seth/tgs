@@ -2,11 +2,11 @@
 {% load static %}
 {% block content %}
 
-<div class="container-fluid fstyle bg pt-5 text-light" style="height: 720px;">
+<div class="container-fluid bg pt-5 text-light fstyle" style="height: 720px;">
     <div class="container trans-l1 rounded border border-primary my-5">
         <div class="row pt-3 text-center">
             <div class="col-12">
-                <div class="h1" style="font-size:9vw">MONTHLY CONTESTS</div>
+                <div class="h1" style="font-size:9vw">{{ctype|upper}} CONTESTS</div>
             </div>
         </div>
         <div class="row">
@@ -24,19 +24,25 @@
         {% for contest in contests %}
         <div class="row m-1 pr-3 py-2 border border-primary trans-l2 text-center" style="font-size:3vw;">
             <div class="col-2">
-                {{contest.m_date|date:"j M"}}
+                {{contest.date|date:"j M"}}
             </div>
             <div class="col-2">
-                {{contest.m_type}}
+                {{contest.match_type}}
             </div>
             <div class="col-3">
-                Entry <i style="font-size: 2vw" class="fas fa-rupee-sign"></i>{{contest.m_fees}}
+                Entry <i style="font-size: 2vw" class="fas fa-rupee-sign"></i>{{contest.fees}}
             </div>
             <div class="col-3">
-                Total Games {{contest.m_tgames}}
+                Total Games {{contest.total_games}}
             </div>
             <div class="col-2">
-                <a href="#" class="btn btn-sm btn-primary">Join</a>
+                {% if ctype == 'daily' %}
+                    <a href="{% url 'djoin' contest.id %}" class="btn btn-sm btn-primary">Join</a>
+                {% elif ctype == 'weekly' %}
+                    <a href="{% url 'wjoin' contest.id %}" class="btn btn-sm btn-primary">Join</a>   
+                {% elif ctype == 'monthly' %}
+                    <a href="{% url 'mjoin' contest.id %}" class="btn btn-sm btn-primary">Join</a>
+                {% endif %}
             </div>
         </div>
         <br>

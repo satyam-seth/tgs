@@ -1,0 +1,93 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container-fluid bg pt-5 text-light">
+  <div class="container trans-l1 rounded border border-primary my-5">
+    <div class="row pt-3 fstyle text-center">
+      <div class="col-12">
+        <div class="h1" style="font-size:7vw">JOIN {{ctype}} CONTESTS</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-5">
+        <hr style='border: 2px solid white;'>
+      </div>
+      <div class="col-2">
+        <img class="mx-auto d-block" src="{% static 'core/images/swards.png' %}">
+      </div>
+      <div class="col-5 pb-4">
+        <hr style='border: 2px solid white;'>
+      </div>
+    </div>
+
+    <div class="pb-3">
+      <form method="POST" action="" enctype="multipart/form-data" class="p-3">
+        {% csrf_token %}
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="matchDate">Match Date</label>
+            <input type="date" class="form-control" id="matchDate" placeholder="Match Date" value="{{contest.date|date:'Y-m-d'}}" disabled>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="matchType">Match Type</label>
+            <input type="text" class="form-control" id="matchType" placeholder="Match Type" value="{{contest.match_type}}" disabled>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="entryFees">Entry Fees</label>
+            <input type="number" class="form-control" id="entryFees" placeholder="Entry Fees" value="{{contest.fees}}" disabled>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="totalGames">Total Games</label>
+            <input type="number" class="form-control" id="totalGames" placeholder="Total Games" value="{{contest.total_games}}" disabled>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="teamName">Team Name</label>
+            <input type="text" class="form-control" id="teamName" placeholder="Team Name" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="teamLeader">Team Leader Name / First Player</label>
+            <input type="text" class="form-control" id="teamLeader" placeholder="First Player" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="secondPlayer">Second Player Name</label>
+            <input type="text" class="form-control" id="secondPlayer" placeholder="Second Player" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="thiredPlayer">Third Player Name</label>
+            <input type="text" class="form-control" id="thiredPlayer" placeholder="Third Player" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="fouthPlayer">Fouth Player Name</label>
+            <input type="text" class="form-control" id="fouthPlayer" placeholder="Fouth Player" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="fifthPlayer">Fifth Player Name</label>
+            <input type="text" class="form-control" id="fifthPlayer" placeholder="Fifth Player" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="paymentSS">Payment Bill Screensort</label>
+            <input type="file" class="form-control-file" id="paymentSS">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="teamLogo">Leam Logo Image</label>
+            <input type="file" class="form-control-file" id="teamLogo">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Join</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

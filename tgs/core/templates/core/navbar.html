@@ -21,11 +21,11 @@
               Contests
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item {{daily_disabled}}" href="{% url 'daily' %}">Daily Contests</a>
+              <a class="dropdown-item {{daily_disabled}}" href="{% url 'clist' 'daily' %}">Daily Contests</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item {{weekly_disabled}}" href="{% url 'weekly' %}">Weekly Contests</a>
+              <a class="dropdown-item {{weekly_disabled}}" href="{% url 'clist' 'weekly' %}">Weekly Contests</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item {{monthly_disabled}}" href="{% url 'monthly' %}">Monthly Contests</a>
+              <a class="dropdown-item {{monthly_disabled}}" href="{% url 'clist' 'monthly' %}">Monthly Contests</a>
             </div>
           </li>
           <li class="nav-item {{contact_active}}">
