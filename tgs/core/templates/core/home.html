@@ -1,5 +1,6 @@
 {% extends 'core/base.html' %}
 {% load static %}
+
 {% block content %}
 <div class="container-fluid pt-1">
   <div class="row pt-5">
@@ -42,6 +43,19 @@
 </div>
 
 <div class="container-fluid bg text-center text-light">
+  <div class="pb-2 pt-3">
+    {% if messages %}
+          {% for message in messages %}
+              <div {% if message.tags %} class='alert alert-{{message.tags}} alert-dismissible fade show' {% endif %} role="alert">
+                  {{message}}
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+          {% endfor %}
+      {% endif %}
+  </div>
+  
   <div class="container my-5 border border-primary border-2 rounded trans-l1">
     <div class="row">
       <div class="col-12">

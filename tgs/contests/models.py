@@ -29,9 +29,17 @@ class Monthly(models.Model):
     def __str__(self):
         return str(self.date)+' '+self.match_type
 
-class Djoin(models.Model):
+class TGS_Weeks(models.Model):
     date=models.DateField()
-    time=models.TimeField()
+    match_type=models.CharField(max_length=5)
+    fees=models.DecimalField(decimal_places=2,max_digits=7)
+    total_games=models.IntegerField()
+
+    def __str__(self):
+        return str(self.date)+' '+self.match_type
+
+class Djoin(models.Model):
+    date_time=models.DateTimeField()
     cid=models.IntegerField()
     team_name=models.CharField(max_length=50)
     leader_pname=models.CharField(max_length=50)
@@ -39,9 +47,10 @@ class Djoin(models.Model):
     third_pname=models.CharField(max_length=50)
     fourth_pname=models.CharField(max_length=50)
     fifth_pname=models.CharField(max_length=50)
-    whats_num=models.IntegerField()
+    whats_num=models.CharField(max_length=10)
+    email=models.EmailField(blank=True, null=True)
     pay_ss=models.ImageField(upload_to="djoin/pss/")
-    team_logo=models.ImageField(upload_to="djoin/logo/",default='Not Available')
+    team_logo=models.ImageField(upload_to="djoin/logo/",blank=True, null=True)
 
     def __str__(self):
         return str(self.cid)+' '+self.team_name

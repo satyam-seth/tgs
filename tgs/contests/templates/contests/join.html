@@ -1,8 +1,23 @@
 {% extends 'core/base.html' %}
 {% load static %}
+
 {% block content %}
 
 <div class="container-fluid bg pt-5 text-light">
+
+  <div class="pt-2">
+    {% if messages %}
+          {% for message in messages %}
+              <div {% if message.tags %} class='alert alert-{{message.tags}} alert-dismissible fade show' {% endif %} role="alert">
+                  {{message}}
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+          {% endfor %}
+      {% endif %}
+  </div>
+
   <div class="container trans-l1 rounded border border-primary my-5">
     <div class="row pt-3 fstyle text-center">
       <div class="col-12">
@@ -46,42 +61,52 @@
         </div>
         <div class="form-row">
           <div class="form-group col-md-6">
-            <label for="teamName">Team Name</label>
-            <input type="text" class="form-control" id="teamName" placeholder="Team Name" required>
+            {{form.team_name.label_tag}}
+            {{form.team_name}}
           </div>
           <div class="form-group col-md-6">
-            <label for="teamLeader">Team Leader Name / First Player</label>
-            <input type="text" class="form-control" id="teamLeader" placeholder="First Player" required>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="secondPlayer">Second Player Name</label>
-            <input type="text" class="form-control" id="secondPlayer" placeholder="Second Player" required>
-          </div>
-          <div class="form-group col-md-6">
-            <label for="thiredPlayer">Third Player Name</label>
-            <input type="text" class="form-control" id="thiredPlayer" placeholder="Third Player" required>
+            {{form.leader_pname.label_tag}}
+            {{form.leader_pname}}
           </div>
         </div>
         <div class="form-row">
           <div class="form-group col-md-6">
-            <label for="fouthPlayer">Fouth Player Name</label>
-            <input type="text" class="form-control" id="fouthPlayer" placeholder="Fouth Player" required>
+            {{form.second_pname.label_tag}}
+            {{form.second_pname}}
           </div>
           <div class="form-group col-md-6">
-            <label for="fifthPlayer">Fifth Player Name</label>
-            <input type="text" class="form-control" id="fifthPlayer" placeholder="Fifth Player" required>
+            {{form.third_pname.label_tag}}
+            {{form.third_pname}}
           </div>
         </div>
         <div class="form-row">
           <div class="form-group col-md-6">
-            <label for="paymentSS">Payment Bill Screensort</label>
-            <input type="file" class="form-control-file" id="paymentSS">
+            {{form.fourth_pname.label_tag}}
+            {{form.fourth_pname}}
           </div>
           <div class="form-group col-md-6">
-            <label for="teamLogo">Leam Logo Image</label>
-            <input type="file" class="form-control-file" id="teamLogo">
+            {{form.fifth_pname.label_tag}}
+            {{form.fifth_pname}}
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            {{form.whats_num.label_tag}}
+            {{form.whats_num}}
+          </div>
+          <div class="form-group col-md-6">
+            {{form.email.label_tag}}
+            {{form.email}}
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            {{form.pay_ss.label_tag}}
+            {{form.pay_ss}}
+          </div>
+          <div class="form-group col-md-6">
+            {{form.team_logo.label_tag}}
+            {{form.team_logo}}
           </div>
         </div>
         <button type="submit" class="btn btn-primary">Join</button>

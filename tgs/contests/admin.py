@@ -17,4 +17,4 @@ class DailyAdmin(admin.ModelAdmin):
 
 @admin.register(Djoin)
 class DjoinAdmin(admin.ModelAdmin):
-    list_display=['id','date','time','team_name','leader_pname','second_pname','third_pname','fourth_pname','fifth_pname','whats_num','pay_ss','team_logo']
+    list_display=['id','cid','date_time','team_name','leader_pname','second_pname','third_pname','fourth_pname','fifth_pname','whats_num','email','pay_ss','team_logo']
