@@ -57,6 +57,7 @@ def daily_join(request,cid):
             messages.success(request,'Your team has successfully joined the contest.')
         else:
             messages.error(request,'Please check and fill all information correctly.')
+            return HttpResponseRedirect(str(cid))
         return redirect('home')
     else:
         form=JoinFrom(label_suffix='')
