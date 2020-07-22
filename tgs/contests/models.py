@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.validators import RegexValidator
 
 # Create your models here.
 
@@ -47,7 +48,8 @@ class Djoin(models.Model):
     third_pname=models.CharField(max_length=50)
     fourth_pname=models.CharField(max_length=50)
     fifth_pname=models.CharField(max_length=50)
-    whats_num=models.CharField(max_length=10)
+    phone_valid=RegexValidator(regex='^\d{10}$')
+    whats_num=models.CharField(validators=[phone_valid],max_length=10)
     email=models.EmailField(blank=True, null=True)
     pay_ss=models.ImageField(upload_to="djoin/pss/")
     team_logo=models.ImageField(upload_to="djoin/logo/",blank=True, null=True)
