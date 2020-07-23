@@ -56,3 +56,39 @@ class Djoin(models.Model):
 
     def __str__(self):
         return str(self.cid)+' '+self.team_name
+
+class Wjoin(models.Model):
+    date_time=models.DateTimeField()
+    cid=models.IntegerField()
+    team_name=models.CharField(max_length=50)
+    leader_pname=models.CharField(max_length=50)
+    second_pname=models.CharField(max_length=50)
+    third_pname=models.CharField(max_length=50)
+    fourth_pname=models.CharField(max_length=50)
+    fifth_pname=models.CharField(max_length=50)
+    phone_valid=RegexValidator(regex='^\d{10}$')
+    whats_num=models.CharField(validators=[phone_valid],max_length=10)
+    email=models.EmailField(blank=True, null=True)
+    pay_ss=models.ImageField(upload_to="wjoin/pss/")
+    team_logo=models.ImageField(upload_to="wjoin/logo/",blank=True, null=True)
+
+    def __str__(self):
+        return str(self.cid)+' '+self.team_name
+
+class Mjoin(models.Model):
+    date_time=models.DateTimeField()
+    cid=models.IntegerField()
+    team_name=models.CharField(max_length=50)
+    leader_pname=models.CharField(max_length=50)
+    second_pname=models.CharField(max_length=50)
+    third_pname=models.CharField(max_length=50)
+    fourth_pname=models.CharField(max_length=50)
+    fifth_pname=models.CharField(max_length=50)
+    phone_valid=RegexValidator(regex='^\d{10}$')
+    whats_num=models.CharField(validators=[phone_valid],max_length=10)
+    email=models.EmailField(blank=True, null=True)
+    pay_ss=models.ImageField(upload_to="mjoin/pss/")
+    team_logo=models.ImageField(upload_to="mjoin/logo/",blank=True, null=True)
+
+    def __str__(self):
+        return str(self.cid)+' '+self.team_name
