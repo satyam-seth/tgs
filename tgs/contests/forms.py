@@ -1,7 +1,9 @@
 from django import forms
+# from phonenumber_field.formfields import PhoneNumberField
 from contests.models import Djoin
 
 class JoinFrom(forms.ModelForm):
+    # whats_num = PhoneNumberField(required=True,widget=forms.TextInput(attrs={'class':'form-control','placeholder':'your whatsapp number'}),label='WhatsApp Number*')
     class Meta:
         model=Djoin
         fields=['team_name','leader_pname','second_pname','second_pname','third_pname','fourth_pname','fifth_pname','whats_num','email','pay_ss','team_logo']
