@@ -42,6 +42,8 @@
                     <a href="{% url 'wjoin' contest.id %}" class="btn btn-sm btn-primary">Join</a>   
                 {% elif ctype == 'monthly' %}
                     <a href="{% url 'mjoin' contest.id %}" class="btn btn-sm btn-primary">Join</a>
+                {% elif ctype == 'TGS Weeks' %}
+                    <a href="{% url 'tgswjoin' contest.id %}" class="btn btn-sm btn-primary">Join</a>
                 {% endif %}
             </div>
         </div>

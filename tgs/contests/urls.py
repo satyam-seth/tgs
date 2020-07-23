@@ -6,4 +6,5 @@ urlpatterns=[
     path('daily/<int:cid>', views.daily_join,name='djoin'),
     path('weekly/<int:cid>', views.weekly_join,name='wjoin'),
     path('monthly/<int:cid>', views.monthly_join,name='mjoin'),
+    path('tgsw/<int:cid>', views.tgsw_join,name='tgswjoin'),
 ]

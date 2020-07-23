@@ -30,7 +30,7 @@ class Monthly(models.Model):
     def __str__(self):
         return str(self.date)+' '+self.match_type
 
-class TGS_Weeks(models.Model):
+class TGSW(models.Model):
     date=models.DateField()
     match_type=models.CharField(max_length=5)
     fees=models.DecimalField(decimal_places=2,max_digits=7)
@@ -89,6 +89,24 @@ class Mjoin(models.Model):
     email=models.EmailField(blank=True, null=True)
     pay_ss=models.ImageField(upload_to="mjoin/pss/")
     team_logo=models.ImageField(upload_to="mjoin/logo/",blank=True, null=True)
+
+    def __str__(self):
+        return str(self.cid)+' '+self.team_name
+
+class Tgswjoin(models.Model):
+    date_time=models.DateTimeField()
+    cid=models.IntegerField()
+    team_name=models.CharField(max_length=50)
+    leader_pname=models.CharField(max_length=50)
+    second_pname=models.CharField(max_length=50)
+    third_pname=models.CharField(max_length=50)
+    fourth_pname=models.CharField(max_length=50)
+    fifth_pname=models.CharField(max_length=50)
+    phone_valid=RegexValidator(regex='^\d{10}$')
+    whats_num=models.CharField(validators=[phone_valid],max_length=10)
+    email=models.EmailField(blank=True, null=True)
+    pay_ss=models.ImageField(upload_to="tgswjoin/pss/")
+    team_logo=models.ImageField(upload_to="tgswjoin/logo/",blank=True, null=True)
 
     def __str__(self):
         return str(self.cid)+' '+self.team_name

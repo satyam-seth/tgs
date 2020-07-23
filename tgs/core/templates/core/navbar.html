@@ -18,7 +18,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle px-3 pl-lg-2" href="#" id="navbarDropdown" role="button"
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Contests
+              Customs
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item {{daily_disabled}}" href="{% url 'clist' 'daily' %}">Daily Contests</a>
@@ -27,7 +27,7 @@
               <div class="dropdown-divider"></div>
               <a class="dropdown-item {{monthly_disabled}}" href="{% url 'clist' 'monthly' %}">Monthly Contests</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item {{tgs_weeks_disabled}}" href="{% url 'clist' 'TGS Weeks' %}">TGS Weeks</a>
+              <a class="dropdown-item {{tgsw_disabled}}" href="{% url 'clist' 'TGS Weeks' %}">TGS Weeks</a>
             </div>
           </li>
           <li class="nav-item {{contact_active}}">
