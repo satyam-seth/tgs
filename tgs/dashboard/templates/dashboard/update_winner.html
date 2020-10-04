@@ -1,0 +1,21 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid bg mt-5 py-5 text-center text-light" style="height:700px">
+    <div class="container mt-5 p-5 border border-primary border-2 rounded trans-l1">
+        <div class="fstyle pb-3" style="font-size:8vw">WINNER {{id}}</div>
+        <form method="POST" action="" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                {{form.team_logo}}
+              </div>
+              <div class="form-group col-md-6">
+                {{form.team_name}}
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+          </form>
+    </div>
+</div>
+{% endblock content %}

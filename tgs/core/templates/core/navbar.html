@@ -39,6 +39,18 @@
           <li class="nav-item {{policy_active}}">
             <a class="nav-link px-3 pl-lg-2 {{policy_disabled}}" href="{% url 'policy' %}">Refund Policy</a>
           </li>
+          {% if request.user.is_authenticated %}
+          <li class="nav-item {{dashboard_active}}">
+            <a class="nav-link {{dashboard_disabled}}" href="{% url 'dashboard' %}">Dashboard</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link " href="{% url 'logout' %}">Logout</a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'login' %}">Login</a>
+          </li>
+          {% endif %}
       </div>
     </div>
   </nav>

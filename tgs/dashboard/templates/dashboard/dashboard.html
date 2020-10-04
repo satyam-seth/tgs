@@ -1,0 +1,90 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block style2 %}
+<link rel="stylesheet" href="{% static 'dashboard/css/style.css' %}">{% endblock style2 %}
+{% block content %}
+
+<div class="container-fluid p-5 bg">
+    <div class="container mt-5 p-5 border border-primary border-2 rounded trans-l1">
+        <div class="btn-group row pl-lg-4" role="group" aria-label="options">
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#winner"
+                aria-expanded="true" aria-controls="winner">
+                Winners
+            </button>
+            <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#winner"
+                aria-expanded="true" aria-controls="winner">
+                Winners
+            </button>
+            <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#winner"
+                aria-expanded="true" aria-controls="winner">
+                Winners
+            </button>
+            <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#winner"
+                aria-expanded="true" aria-controls="winner">
+                Winners
+            </button>
+            <button class="btn btn-warning" type="button" data-toggle="collapse" data-target="#winner"
+                aria-expanded="true" aria-controls="winner">
+                Winners
+            </button>
+            <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#winner"
+                aria-expanded="true" aria-controls="winner">
+                Winners
+            </button>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#winner"
+                aria-expanded="true" aria-controls="winner">
+                Winners
+            </button>
+            <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#winner"
+                aria-expanded="true" aria-controls="winner">
+                Winners
+            </button>
+            <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#winner"
+                aria-expanded="true" aria-controls="winner">
+                Winners
+            </button>
+            <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#winner"
+                aria-expanded="true" aria-controls="winner">
+                Winners
+            </button>
+            <button class="btn btn-warning" type="button" data-toggle="collapse" data-target="#winner"
+                aria-expanded="true" aria-controls="winner">
+                Winners
+            </button>
+            <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#winner"
+                aria-expanded="true" aria-controls="winner">
+                Winners
+            </button>
+        </div>
+        <div class="collapse pt-5" id="winner">
+            <div class="card card-body border border-primary border-2 rounded">
+                <div class="table-responsive table-striped shadow-lg border border-primary border-2 rounded">
+                    <table class="table text-center">
+                        <thead>
+                            <tr>
+                                <th scope="col">Posotion</th>
+                                <th scope="col">Team Name</th>
+                                <th scope="col">Team Logo</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for winner in winners %}
+                            <tr>
+                                <th scope="row">{{winner.id}}</th>
+                                <td>{{winner.team_name}}</td>
+                                <td>{{winner.team_logo}}</td>
+                                <td>
+                                    <a href="{% url 'update_winner' winner.id %}" class="btn btn-info">Edit</a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

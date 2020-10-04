@@ -26,7 +26,8 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('about/', views.about, name='about'),
     path('policy/', views.policy, name='policy'),
-    path('contests/', include('contests.urls'))
+    path('contests/', include('contests.urls')),
+    path('manage/', include('dashboard.urls')),
 ]
  
 urlpatterns += staticfiles_urlpatterns()
